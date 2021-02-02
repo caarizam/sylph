@@ -1,7 +1,7 @@
 env:
   global:
-    - FLUTTER_CHANNEL=stable
-    - FLUTTER_VERSION=1.12.13+hotfix.8-${FLUTTER_CHANNEL}
+    - FLUTTER_CHANNEL=dev
+    - FLUTTER_VERSION=1.20.0-3.0.pre-${FLUTTER_CHANNEL}
     - ANDROID_SDK_TOOLS=sdk-tools-darwin-4333796.zip # older sdkmanager
 #    - ANDROID_SDK_TOOLS=commandlinetools-mac-6200805_latest.zip # latest sdkmanager
     - ANDROID_PLATFORM_SDK=28
@@ -15,7 +15,7 @@ jobs:
     - stage: Run sylph
       env: Run Unit Tests
       language: dart
-      dart: stable
+      dart: dev
       os: linux
       before_script: # exits build if tests fail
         - pub run test test/all_tests.dart
