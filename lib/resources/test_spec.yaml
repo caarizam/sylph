@@ -26,6 +26,7 @@ phases:
       #- whoami
       #- groups
       - echo "DEVICEFARM_APP_PATH=$DEVICEFARM_APP_PATH"
+      - echo ">>> charlie test"
 
       # install flutter
       - echo "Install flutter DEV"
