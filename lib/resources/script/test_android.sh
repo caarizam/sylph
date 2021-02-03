@@ -137,8 +137,12 @@ custom_test_runner() {
 
     # run test
     echo "Running integration test $test_path on app $app_id ..."
-    echo "Listing folders"
+    echo "Listing folders ______________"
     ls
+    echo "printing path   ______________"
+    echo $test_path
+    echo "Listing test_path ______________"
+    ls $test_path
     export VM_SERVICE_URL=http://127.0.0.1:"$forwarded_port$obs_token"
     dart "$test_path"
 }
