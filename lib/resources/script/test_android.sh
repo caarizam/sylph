@@ -143,6 +143,12 @@ custom_test_runner() {
     echo $test_path
     echo "Listing test_path ______________"
     ls $test_path
+    echo "Listing test driver ______________"
+    ls test_driver
+    echo "Listing test driver/features ______________"
+    ls test_driver/features
+    echo "Listing test driver/steps_definition ______________"
+    ls test_driver/steps_definition
     export VM_SERVICE_URL=http://127.0.0.1:"$forwarded_port$obs_token"
     dart "$test_path"
 }
