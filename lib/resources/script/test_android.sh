@@ -150,7 +150,8 @@ custom_test_runner() {
     echo "Listing test driver/steps_definition ______________"
     ls test_driver/steps_definition
     export VM_SERVICE_URL=http://127.0.0.1:"$forwarded_port$obs_token"
-    dart "$test_path"
+    cd test_driver
+    dart app_test.dart
 }
 
 # get app id from .apk
