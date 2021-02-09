@@ -49,6 +49,7 @@ phases:
       - mv flutter $HOME/flutter
       - export PATH=$PATH:$HOME/flutter/bin:$HOME/flutter/bin/cache/dart-sdk/bin
       - export PATH="$PATH":"$HOME/.pub-cache/bin"
+      - flutter doctor --android-licenses
       - flutter doctor -v
 
   # The pre-test phase includes commands that setup your test environment.
